@@ -77,8 +77,8 @@ const getStreamUrl = async (streamer: string) => {
 
 (async () => {
   while (true) {
-    // const url = await getStreamUrl('locobaltar');
-    const url = 'https://tx.flv.nimo.tv/live/su2399516623029rdce8d6299a7e246bfb7c47f07d636a4f.flv';
+    const url = await getStreamUrl('locobaltar');
+    // const url = 'https://tx.flv.nimo.tv/live/su2399516623029rdce8d6299a7e246bfb7c47f07d636a4f.flv';
     const outputDir = '/media/mateus/Mateus/output';
 
     if (!existsSync(outputDir)) {
@@ -97,9 +97,7 @@ const getStreamUrl = async (streamer: string) => {
         console.log('Recording... ' + progress.frames + ' -> ' + progress.timemark);
         if (progress.frames > 3593 && !notification) {
           notification = true;
-          axios.post('https://discord.com/api/webhooks/900147643995549746/5cPzIyM4unJPD98DDJhezbY8tLX9CLNhhUjgRpngdNTZv7gT1mxrIIjExqZfMIbbXoO_', {
-            "content": "Fala @everyone, bérou está ONLINE na Nimo.tv! https://www.nimo.tv/locobaltar"
-          });
+          // Notify Discord!
         }
       })
       .run());
