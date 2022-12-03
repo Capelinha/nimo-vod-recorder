@@ -1,3 +1,3 @@
-# nimo-vod-downloader
+# nimo-vod-recorder
 
-Project to download vod files from nimo.tv. Replace the getStreamerUrl with the name of the streamer
+Project to record lives from nimo.tv in realtime, best than download the vod later because the watermark. Replace the getStreamerUrl with the name of the streamer
